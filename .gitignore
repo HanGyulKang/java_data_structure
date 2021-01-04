@@ -1,0 +1,4 @@
+# Project exclude paths
+/out/
+.idea
+java_data_structure.iml
