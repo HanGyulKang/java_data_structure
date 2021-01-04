@@ -3,6 +3,7 @@ package basic_algorithm;
 import java.util.Scanner;
 
 public class Max_01 {
+    // 네 값 중 최댓값 구하기
     static int max4(int a, int b, int c, int d) {
         int max = a;
 
