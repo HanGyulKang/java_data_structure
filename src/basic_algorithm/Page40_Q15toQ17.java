@@ -4,20 +4,17 @@ import java.util.Scanner;
 
 public class Page40_Q15toQ17 {
     static void Q17(int a) {
-        int cnt = 1;
-
-        for (int i = 0; i < a; i++) {
-            for (int j = a - 1; j >= 0; j--) {
+        for (int i = 1; i < a + 1; i++) {
+            for (int j = a; j > 1; j--) {
                 if(j <= i) {
-                    System.out.print(cnt);
+                    System.out.print(i % 10);
                 } else {
                     System.out.print(" ");
                 }
             }
             for (int j = 0; j < i; j++) {
-                System.out.print(cnt);
+                System.out.print(i % 10);
             }
-            cnt++;
             System.out.println();
         }
     }
