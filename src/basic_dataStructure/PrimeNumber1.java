@@ -4,9 +4,10 @@ public class PrimeNumber1 {
     public static void main(String[] args) {
         int cnt = 0;
 
-        for (int i = 2; i <= 50; i++) {
+        for (int i = 2; i <= 1000; i++) {
             int j;
             for (j = 2; j < i; j++) {
+                cnt++;
                 // i mod j의 값이 0 이면 i가 나누어지는 수가 있음
                 // 위와 같을 경우 break
                 System.out.println(i + " " + j);
@@ -14,8 +15,6 @@ public class PrimeNumber1 {
                 if(i % j == 0) {
                     break;
                 }
-
-                cnt++;
             }
 
             if(i == j) {
