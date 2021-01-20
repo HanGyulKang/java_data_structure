@@ -8,14 +8,7 @@ public class Page117_Q3 {
     // 예를들어 요솟수가 8인 배열 a의 요소가 {1,9,2,9,4,6,7,9}이고 key가 9면 배열 idx에
     // {1,3,7}을 저장하고 3을 반환합니다.
 
-    // 이진검색 답
-    static int 이진검색(int[] a, int n, int key, int[] idx) {
-
-        return 0;
-    }
-
-
-    // 선형검색 답
+    // 선형검색
     static int 선형검색(int[] a, int n, int key, int[] idx) {
         int cnt = 0;
 
@@ -58,17 +51,6 @@ public class Page117_Q3 {
             System.out.println("\n검색한 값이 없습니다.");
         } else {
             System.out.println("\n(선형 검색)검색한 값의 갯수는 : " + res1);
-        }
-
-
-
-        // 이진검색 메소드 호출
-        int res2 = 이진검색(a, n, key, idx);
-
-        if(res1 == -1) {
-            System.out.println("\n검색한 값이 없습니다.");
-        } else {
-            System.out.println("\n(이진 검색)검색한 값의 갯수는 : " + res2);
         }
 
     }
