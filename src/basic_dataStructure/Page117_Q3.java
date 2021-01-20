@@ -45,12 +45,12 @@ public class Page117_Q3 {
         int[] idx = {};
 
         // 선형검색 메소드 호출
-        int res1 = 선형검색(a, n, key, idx);
+        int res = 선형검색(a, n, key, idx);
 
-        if(res1 == -1) {
+        if(res == -1) {
             System.out.println("\n검색한 값이 없습니다.");
         } else {
-            System.out.println("\n(선형 검색)검색한 값의 갯수는 : " + res1);
+            System.out.println("\n(선형 검색)검색한 값의 갯수는 : " + res);
         }
 
     }
