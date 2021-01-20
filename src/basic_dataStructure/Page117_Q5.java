@@ -1,5 +1,6 @@
 package basic_dataStructure;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Page117_Q5 {
@@ -40,7 +41,7 @@ public class Page117_Q5 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
 
         int[] a = {1,2,3,4,5,6,7,11,11,11,11,11,11,11,12,13,14,15,16,17};
@@ -56,5 +57,12 @@ public class Page117_Q5 {
             System.out.println("결과는? " + res);
         }
 
+        // Arrays.binarySearch를 사용한 이진
+        try {
+            System.out.println("검색한 값의 위치는? " + Arrays.binarySearch(a, key)
+                    + ", 값은? " + a[Arrays.binarySearch(a, key)]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new Exception("찾은 값이 없습니다.");
+        }
     }
 }
