@@ -15,12 +15,14 @@ public class SearchPT {
 
         // 정렬
         for (int i = 0; i < SIZE; i++) {
-            for (int j = 1; j < i; j++) {
-                int temp = 0;
-                if(arr[i] > arr[j - 1]) {
-                    temp = arr[i];
-                    arr[i] = arr[j - 1];
-                    arr[i] = temp;
+            for (int j = 0; j < SIZE; j++) {
+                if(j == SIZE - 1) {
+                    break;
+                }
+                if(arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
