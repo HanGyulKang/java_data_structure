@@ -26,9 +26,38 @@ public class SearchPT {
                 }
             }
         }
+        System.out.println("숫자 입력 종료\n\n[ 정렬 끝] \n");
 
         for (int i = 0; i < SIZE; i++) {
             System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        int num = scan.nextInt();
+        System.out.println("찾는 숫자 " + num + "의 위치는?");
+
+        // 이진 검색 시작
+        int front = 0;
+        int back = SIZE - 1;
+        int res = -1;
+
+        while(front <= back) {
+            int mid = (front + back) / 2; // 반복될 수록 front 또는 back의 값이 달라지므로 mid는 가변값
+
+            if(num == arr[mid]) {
+                res = mid;
+                break;
+            } else if(num < arr[mid]) {
+                back = mid - 1;
+            } else if(num > arr[mid]) {
+                front = mid + 1;
+            }
+        }
+
+        if (res < 0) {
+            System.out.println("찾는 숫자가 없습니다.");
+        } else {
+            System.out.println(num + "의 위치는 " + res + "입니다.");
         }
     }
 }
