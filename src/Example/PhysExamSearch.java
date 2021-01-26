@@ -1,4 +1,4 @@
-package basic_dataStructure;
+package Example;
 
 import java.util.Arrays;
 import java.util.Comparator;

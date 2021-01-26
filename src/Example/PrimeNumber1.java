@@ -1,4 +1,4 @@
-package basic_dataStructure;
+package Example;
 
 public class PrimeNumber1 {
     public static void main(String[] args) {

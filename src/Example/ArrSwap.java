@@ -1,4 +1,4 @@
-package basic_dataStructure;
+package Example;
 
 public class ArrSwap {
     static void swap(int[] arr, int idx1, int idx2) {
