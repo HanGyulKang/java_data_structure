@@ -44,8 +44,8 @@ public class IntStack {
         if(ptr <= 0) { // 스택이 비어있음
             throw new EmptyIntStackException();
         }
-
-        return stk[ptr--];
+        // ptr은 index + 1이기 때문에 전위 감소 연산자(들어올 때 이미 값 - 1)를 붙여줘야 한다.
+        return stk[--ptr];
     }
 
     // 피크 메서드(스택의 꼭대기에 있는 데이터를 "몰래 엿보는" 메서드
