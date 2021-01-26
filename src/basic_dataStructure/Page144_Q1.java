@@ -1,6 +1,6 @@
 package basic_dataStructure;
 
-import Example.IntStack;
+import example.IntStack;
 import java.util.Scanner;
 
 // int형 스택의 사용 예

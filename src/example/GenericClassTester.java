@@ -1,4 +1,4 @@
-package Example;
+package example;
 
 // 제네릭 클래스의 예
 public class GenericClassTester {

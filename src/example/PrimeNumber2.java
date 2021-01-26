@@ -1,4 +1,4 @@
-package Example;
+package example;
 
 public class PrimeNumber2 {
     public static void main(String[] args) {

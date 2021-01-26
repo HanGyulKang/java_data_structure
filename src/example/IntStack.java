@@ -1,4 +1,4 @@
-package Example;
+package example;
 
 // int형 스택
 public class IntStack {
