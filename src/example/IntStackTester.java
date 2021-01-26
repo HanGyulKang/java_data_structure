@@ -3,6 +3,7 @@ package example;
 import java.util.Scanner;
 
 // int형 스택의 사용 예
+// 클래스 완성은 Page144_Q1.class에 작성됨
 public class IntStackTester {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
