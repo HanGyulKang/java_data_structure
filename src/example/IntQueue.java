@@ -37,6 +37,8 @@ public class IntQueue {
         }
 
         que[rear++] = x; // que에 값 입력 후 rear를 증가하여 다음에 들어올 값의 index를 잡아 줌
+        num++;
+
         if(rear == max) { // rear가 증가하다가 max(que 크기)와 같아지면 사실상 배열에 없는 index를 가리키기 때문에 0으로 초기화
             rear = 0;
         }
@@ -59,17 +61,18 @@ public class IntQueue {
         return x;
     }
 
-    // 큐에서 데이터를 피크(프런트 데이터를 들여다봄)
+    // 큐에서 데이터를 피크(프런트 데이터를 들여다봄 : 디큐에서 꺼낼 데이터를 봄)
     public int peek() throws EmptyIntQueueException {
         if(num <= 0) {
             throw new EmptyIntQueueException();
         }
 
-        return que[front];
+        return que[front]; // 이미 증가된 front값을 index에 넣기 때문에 다음번에 꺼내질 데이터를 확인해볼 수 있음(값의 변화는 x)
     }
     
     // 큐에서 x를 검색하여 인덱스(찾지 못하면 -1을 반환)를 반환
     public int indexOf(int x) {
+        // 선형 검색(스캔의 시작은 배열의 첫 요소가 아니라 큐의 첫 요소(=front)
         for (int i = 0; i < num; i++) {
             int idx = (i + front) % max;
 
@@ -83,7 +86,9 @@ public class IntQueue {
 
     // 큐를 비움
     public void clear() {
-        num = front = rear = 0; // num, front, rear값을 다시 0으로 초기화
+        // num, front, rear값을 다시 0으로 초기화
+        // 실제 que 배열 안의 값을 변경할 필요는 없음
+        num = front = rear = 0;
     }
 
     // 큐의 용량을 반환
@@ -114,10 +119,35 @@ public class IntQueue {
             for(int i = 0; i < num; i++) {
                 // (i + front) % max일 경우 front의 최대값(배열 index의 마지막 값)이 max보다 1이 작기 때문에
                 // front에 i를 0부터 순차적으로 더해주면 현재 front -> rear 순서로 배열 index값이 찍힘
+                // front를 중심으로 변하는 i를 더 해가면서 max로 mod해주면 됨
+                // =============================================
+                // front  : 7  7  7  7  7  7  7  7  7  7   7  7
+                // i      : 0  1  2  3  4  5  6  7  8  9  10 11
+                // max    : 12 12 12 12 12 12 12 12 12 12 12 12
+                // result : 7  8  9  10 11  0  1  2  3  4  5  6
+                // =============================================
                 System.out.print(que[(i + front) % max] + " ");
             }
             System.out.println();
         }
+    }
+
+    public int search(int x) {
+        if(num <= 0) {
+            System.out.println("큐가 비었습니다.");
+        } else {
+            int res = 0;
+            for (int i = 0; i < num; i++) {
+                int idx = (i + front) % max;
+
+                if(que[idx] == x) {
+                    res = idx;
+                }
+            }
+
+        }
+
+        return 0; // 검색 실패
     }
 
 }
