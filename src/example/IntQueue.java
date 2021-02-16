@@ -20,7 +20,7 @@ public class IntQueue {
 
     // 생성자
     public IntQueue(int capacity) {
-        num = front = rear = 0;
+        num = front = rear = 0; // 큐 생성시 큐는 비어있는 상태이기 때문에 num, front, rear 모두 0으로 초기화
         max = capacity;
 
         try {
