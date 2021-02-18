@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Page160_Q5 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        IntQueue q = new IntQueue(64); // 최대 64개를 인큐할 수 있는 큐
+        IntQueue q = new IntQueue(12); // 최대 64개를 인큐할 수 있는 큐
 
         while(true) {
             System.out.println("\n현재 데이터 수 : " + q.size() + " / " + q.capacity());
@@ -60,7 +60,7 @@ public class Page160_Q5 {
 
                     try {
                         int a = q.search(x);
-                        System.out.println(">>>>>>>>> " + a);
+                        System.out.println(">>>>>>>>>>>> " + a);
                     } catch (IntQueue.EmptyIntQueueException e) {
                         System.out.println("큐가 비었습니다.");
                     }

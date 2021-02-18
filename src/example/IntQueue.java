@@ -137,6 +137,7 @@ public class IntQueue {
             System.out.println("큐가 비었습니다.");
         } else {
             int res = 0;
+            int location = 0;
             for (int i = 0; i < num; i++) {
                 int idx = (i + front) % max;
 
@@ -144,10 +145,19 @@ public class IntQueue {
                     res = idx;
                 }
             }
+            location = res;
 
+            if(location == front) {
+                return 1;
+            } else if(location > front) {
+                return location - front + 1;
+            } else if(location < front) {
+                int y = indexOf(x);
+                System.out.println((max - front) + (y + 1));
+            }
         }
 
-        return 0; // 검색 실패
+        return -1; // 검색 실패
     }
 
 }
